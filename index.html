@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Phone-hunter</title>
 </head>
+
 <body>
     <header>
 
@@ -14,27 +16,48 @@
     <main class="container lg:w-[80%] m-auto lg:p-0 p-4">
         <h1 class="text-center text-2xl my-12">Search your phone</h1>
         <!-- search container  -->
-         <section class="lg:w-[60%] m-auto flex gap-2 my-6">
-            <input id="search-input" class="w-full py-2 px-4 rounded-lg bg-gray-100" type="text" value="" placeholder="Search Your Phone..">
+        <section class="lg:w-[60%] m-auto flex gap-2 my-6">
+            <input id="search-input" class="w-full py-2 px-4 rounded-lg bg-gray-100" type="text" value=""
+                placeholder="Search Your Phone..">
             <button onclick="handleSearch()" class="py-2 px-4 rounded-lg border bg-green-500 text-xl">Search</button>
-         </section>
+        </section>
         <section>
+            <!-- spinner  -->
             <section>
                 <div id="loading-spinner" class="my-24 text-center hidden">
-                    <span  class="loading loading-spinner loading-md "></span>
+                    <span class="loading loading-spinner loading-md "></span>
                 </div>
             </section>
+            <!-- main container  -->
             <section id="Container" class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 ">
 
-        </section>
-        <div class="justify-center flex items-center">
-            <button id="show-more" onclick="handleShowMore()" class="py-2 px-4 rounded-lg border bg-green-500 text-xl text-center hidden my-6">Show More</button>
-        </div>
+            </section>
+            <!-- show more btn  -->
+            <div class="justify-center flex items-center">
+                <button id="show-more" onclick="handleShowMore()"
+                    class="py-2 px-4 rounded-lg border bg-green-500 text-xl text-center hidden my-6">Show More</button>
+            </div>
         </section>
     </main>
     <footer>
-
+        <!-- modal  -->
+        <section>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <!-- add more content  -->
+                    <div id="phone-container">
+                        
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
     </footer>
     <script src="js/main.js"></script>
 </body>
+
 </html>
